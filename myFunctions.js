@@ -219,7 +219,7 @@ function confirmOrder() {
         <div class="success-message">
             <h3>تم إرسال طلبك بنجاح!</h3>
             <p>سيتم التواصل معك قريباً لتأكيد التفاصيل.</p>
-            <button onclick="resetForm()" class="ok-btn">موافق</button>
+            <button onclick='location.href=index.html' class="ok-btn">موافق</button>
         </div>
     `;
     
