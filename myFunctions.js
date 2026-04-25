@@ -269,7 +269,7 @@ function exitSite() {
         // In a real application, this would redirect to a logout page
         // For demo purposes, we'll show a message
         alert('شكراً لزيارتك موقعنا!');
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
     }
 }
 
