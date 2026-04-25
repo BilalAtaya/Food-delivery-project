@@ -1,0 +1,418 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tahoma', Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #34495e;
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 140px);
+    padding: 2rem 0;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Home Page Styles */
+.student-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.project-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* About Us Page */
+.about-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.restaurant-info,
+.contact-info,
+.features {
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-right: 4px solid #e74c3c;
+}
+
+.contact-item {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-item strong {
+    color: #2c3e50;
+    min-width: 120px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    background: #e8f4f8;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    border-right: 3px solid #3498db;
+    position: relative;
+    padding-right: 2rem;
+}
+
+.features li:before {
+    content: "✓";
+    position: absolute;
+    right: 10px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Meals Page */
+.meals-table-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.meals-table {
+    width: 100%;
+    min-width: 800px;
+}
+
+.details-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.details-btn:hover {
+    background-color: #2980b9;
+}
+
+.meal-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.details-row {
+    background-color: #f8f9fa;
+}
+
+.meal-details {
+    padding: 1rem;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 0.5rem;
+}
+
+.meal-details p {
+    margin-bottom: 0.5rem;
+}
+
+.meal-details ul {
+    margin-right: 1rem;
+    list-style-type: square;
+}
+
+/* Continue Button */
+.continue-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.continue-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.continue-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Order Form */
+.order-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: block;
+    font-weight: bold;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.submit-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #229954;
+    transform: translateY(-2px);
+}
+
+.cancel-btn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #7f8c8d;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .meals-table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .continue-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .meals-table {
+        font-size: 0.8rem;
+    }
+    
+    th, td {
+        padding: 6px 8px;
+    }
+}

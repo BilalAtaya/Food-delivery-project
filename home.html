@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">الرئيسية</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+                <li><a href="Meals.html">الوجبات</a></li>
+                <li><a href="#" onclick="exitSite()">خروج</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1>الصفحة الرئيسية</h1>
+            
+            <div class="student-info">
+                <h2>معلومات الطلاب</h2>
+                <table>
+                    <tr>
+                        <th>اسم الطالب</th>
+                        <th>الاسم بالإنجليزي</th>
+                        <th>الرقم الجامعي</th>
+                    </tr>
+                    <tr>
+                        <td>أحمد محمد علي</td>
+                        <td>Ahmed Mohammed Ali</td>
+                        <td>2021001234</td>
+                    </tr>
+                    <tr>
+                        <td>خالد عبدالله سالم</td>
+                        <td>Khalid Abdullah Salem</td>
+                        <td>2021005678</td>
+                    </tr>
+                    <tr>
+                        <td>عمر حسن إبراهيم</td>
+                        <td>Omar Hassan Ibrahim</td>
+                        <td>2021009012</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="project-info">
+                <h2>معلومات المشروع</h2>
+                <p><strong>رابط نشر الموقع:</strong> <a href="#">https://example.com/food-ordering</a></p>
+                
+                <div class="notes">
+                    <h3>ملاحظات:</h3>
+                    <ul>
+                        <li>هذا المشروع كجزء من متطلبات مقرر تطوير الويب</li>
+                        <li>تم استخدام HTML5, CSS3, JavaScript مع jQuery</li>
+                        <li>الموقع يدعم اللغة العربية بالكامل</li>
+                        <li>جميع الصفحات متصلة مع بعضها البعض</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 جميع الحقوق محفوظة - موقع طلب الطعام</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="myFunctions.js"></script>
+</body>
+</html>
