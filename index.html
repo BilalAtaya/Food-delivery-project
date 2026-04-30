@@ -1,88 +1,86 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>الصفحة الرئيسية</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
-        <nav>
+    <div class="header">
+        <div class="nav">
             <ul>
-                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="home.html" class="active">الرئيسية</a></li>
                 <li><a href="AboutUs.html">من نحن</a></li>
                 <li><a href="Meals.html">الوجبات</a></li>
-                <li><a href="#" onclick="exitSite()">خروج</a></li>
+                <li><a href="#" onclick="exitSite(); return false;">خروج</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <h1>الصفحة الرئيسية</h1>
-            
-            <div class="student-info">
-                <h2>معلومات الطلاب</h2>
-                <table>
+    <div class="container">
+        <h1>الصفحة الرئيسية</h1>
+        
+        <div class="student-info">
+            <h2>معلومات الطلاب</h2>
+            <table summary="أسماء الطلاب وأرقامهم">
+                <thead>
                     <tr>
                         <th>اسم الطالب</th>
                         <th>الاسم بالإنجليزي</th>
                         <th>الرقم الجامعي</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td>بلال محمد عطايا</td>
                         <td>Bilal Mohammed Ataya</td>
                         <td>bilal_371884</td>
                     </tr>
                     <tr>
-                        <td>اسامة عدنان الربداوي</td>
-                        <td>Osama Adnan Al Rebdawi</td>
-                        <td>osama_368760</td>
-                    </tr>
-                    <tr>
-                        <td>لميا احمد الصياد</td>
-                        <td>Lamia Ahmad Al Sayyad</td>
-                        <td>lamia_392160</td>
-                    </tr>
-                     <tr>
-                        <td>تبارك اسماعيل عياش</td>
-                        <td>Tabarak Ismail Ayash</td>
-                        <td>tabarak_367646</td>
-                    </tr>
-                     <tr>
                         <td>ريان عبد الرزاق البقاعي</td>
-                        <td>Ryan Abdul Razzaq Al Baqai</td>
+                        <td>Rayan Abdul Razzaq Al-Baqa'i</td>
                         <td>Rayan_338058</td>
                     </tr>
-                </table>
-            </div>
+                    <tr>
+                        <td>لميا أحمد الصياد</td>
+                        <td>Lamia Ahmad Al-Sayyad</td>
+                        <td>lamia_392160</td>
+                    </tr>
+                    <tr>
+                        <td>تبارك إسماعيل عياش</td>
+                        <td>Tabarak Ismail Ayyash</td>
+                        <td>tabarak_367646</td>
+                    </tr>
+                    <tr>
+                        <td>أسامة عدنان الربداي</td>
+                        <td>Osama Adnan Al-Rabdayi</td>
+                        <td>osama_368760</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <div class="project-info">
-                <h2>معلومات المشروع</h2>
-                <p><strong>رابط نشر الموقع:</strong> <a href="#">https://bilalataya.github.io/Food-delivery-project/</a></p>
-                
-                <div class="notes">
-                    <h3>ملاحظات:</h3>
-                    <ul>
-                        <li>هذا المشروع كجزء من متطلبات مقرر تطوير الويب</li>
-                        <li>تم استخدام HTML5, CSS3, JavaScript مع jQuery</li>
-                        <li>الموقع يدعم اللغة العربية بالكامل</li>
-                        <li>جميع الصفحات متصلة مع بعضها البعض</li>
-                    </ul>
-                </div>
+        <div class="project-info">
+            <h2>معلومات المشروع</h2>
+            <p><strong>رابط نشر الموقع:</strong> <a href="#">https://example.com/food-ordering</a></p>
+            <div class="notes">
+                <h3>ملاحظات:</h3>
+                <ul>
+                    <li>هذا المشروع كجزء من متطلبات مقرر تطوير الويب</li>
+                    <li>تم استخدام XHTML, CSS, JavaScript مع jQuery</li>
+                    <li>الموقع يدعم اللغة العربية بالكامل</li>
+                    <li>جميع الصفحات متصلة مع بعضها البعض</li>
+                </ul>
             </div>
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 جميع الحقوق محفوظة - موقع طلب الطعام</p>
-    </footer>
+    <div class="footer">
+        <p>© 2024 جميع الحقوق محفوظة - موقع طلب الطعام</p>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="myFunctions.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
 </body>
 </html>
