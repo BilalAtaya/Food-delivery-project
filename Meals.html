@@ -1,219 +1,191 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>الوجبات</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
-        <nav>
+    <div class="header">
+        <div class="nav">
             <ul>
-                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="home.html">الرئيسية</a></li>
                 <li><a href="AboutUs.html">من نحن</a></li>
                 <li><a href="Meals.html" class="active">الوجبات</a></li>
-                <li><a href="#" onclick="exitSite()">خروج</a></li>
+                <li><a href="#" onclick="exitSite(); return false;">خروج</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <h1>قائمة الوجبات</h1>
-            
-            <!-- Meals Table -->
-            <div class="meals-table-container">
-                <table id="mealsTable" class="meals-table">
-                    <thead>
-                        <tr>
-                            <th>الرمز</th>
-                            <th>اسم الوجبة</th>
-                            <th>السعر</th>
-                            <th>إظهار التفاصيل</th>
-                            <th>اختيار</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>SF-001</td>
-                            <td>مندي بالدجاج</td>
-                            <td>45,000</td>
-                            <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
-                            <td><input type="checkbox" class="meal-checkbox" data-name="مندي بالدجاج" data-price="45000"></td>
-                        </tr>
-                        <tr class="details-row" style="display: none;">
-                            <td colspan="5">
-                                <div class="meal-details">
-                                    <p><strong>نوع المطبخ:</strong> سوري</p>
-                                    <p><strong>تصنيف الطعام:</strong> أطباق رئيسية</p>
-                                    <p><strong>المكونات:</strong></p>
-                                    <ul>
-                                        <li>دجاج طازج</li>
-                                        <li>أرز بسمتي</li>
-                                        <li>بهارات خاصة</li>
-                                        <li>زعفران</li>
-                                        <li>مكسرات</li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>SF-002</td>
-                            <td>كبسة لحم</td>
-                            <td>55,000</td>
-                            <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
-                            <td><input type="checkbox" class="meal-checkbox" data-name="كبسة لحم" data-price="55000"></td>
-                        </tr>
-                        <tr class="details-row" style="display: none;">
-                            <td colspan="5">
-                                <div class="meal-details">
-                                    <p><strong>نوع المطبخ:</strong> سعودي</p>
-                                    <p><strong>تصنيف الطعام:</strong> أطباق رئيسية</p>
-                                    <p><strong>المكونات:</strong></p>
-                                    <ul>
-                                        <li>لحم ضأن</li>
-                                        <li>أرز بسمتي</li>
-                                        <li>بهارات كبسة</li>
-                                        <li>طماطم وبصل</li>
-                                        <li>زبيب ومكسرات</li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>SF-003</td>
-                            <td>شاورما دجاج</td>
-                            <td>25,000</td>
-                            <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
-                            <td><input type="checkbox" class="meal-checkbox" data-name="شاورما دجاج" data-price="25000"></td>
-                        </tr>
-                        <tr class="details-row" style="display: none;">
-                            <td colspan="5">
-                                <div class="meal-details">
-                                    <p><strong>نوع المطبخ:</strong> سوري</p>
-                                    <p><strong>تصنيف الطعام:</strong> ساندويتشات</p>
-                                    <p><strong>المكونات:</strong></p>
-                                    <ul>
-                                        <li>دجاج مشوي</li>
-                                        <li>خبز عربي</li>
-                                        <li>طحينة</li>
-                                        <li>خضار طازجة</li>
-                                        <li>صلصة خاصة</li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>SF-004</td>
-                            <td>فلافل مشكلة</td>
-                            <td>20,000</td>
-                            <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
-                            <td><input type="checkbox" class="meal-checkbox" data-name="فلافل مشكلة" data-price="20000"></td>
-                        </tr>
-                        <tr class="details-row" style="display: none;">
-                            <td colspan="5">
-                                <div class="meal-details">
-                                    <p><strong>نوع المطبخ:</strong> شرقي</p>
-                                    <p><strong>تصنيف الطعام:</strong> مقبلات</p>
-                                    <p><strong>المكونات:</strong></p>
-                                    <ul>
-                                        <li>فلافل طازجة</li>
-                                        <li>حمص</li>
-                                        <li>تبولة</li>
-                                        <li>خبز صاج</li>
-                                        <li>مخللات</li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>SF-005</td>
-                            <td>برجر لحم</td>
-                            <td>35,000</td>
-                            <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
-                            <td><input type="checkbox" class="meal-checkbox" data-name="برجر لحم" data-price="35000"></td>
-                        </tr>
-                        <tr class="details-row" style="display: none;">
-                            <td colspan="5">
-                                <div class="meal-details">
-                                    <p><strong>نوع المطبخ:</strong> سوري</p>
-                                    <p><strong>تصنيف الطعام:</strong> ساندويتشات</p>
-                                    <p><strong>المكونات:</strong></p>
-                                    <ul>
-                                        <li>لحم بقري مفروم</li>
-                                        <li>خبز برجر</li>
-                                        <li>جبنة شيدر</li>
-                                        <li>خضار طازجة</li>
-                                        <li>صلصة برجر</li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Continue Button -->
-            <div class="continue-section">
-                <button id="continueBtn" onclick="showForm()" class="continue-btn">متابعة</button>
-            </div>
-
-            <!-- Order Form (Hidden by default) -->
-            <div id="orderForm" class="order-form" style="display: none;">
-                <h2>نموذج الطلب</h2>
-                <form id="customerForm" onsubmit="return validateForm(event)">
-                    <div class="form-group">
-                        <label for="fullName">الاسم الكامل:</label>
-                        <input type="text" id="fullName" name="fullName">
-                        <span id="nameError" class="error-message"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="nationalId">الرقم الوطني:</label>
-                        <input type="text" id="nationalId" name="nationalId" required>
-                        <span id="nationalIdError" class="error-message"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="birthDate">تاريخ الولادة (dd-mm-yyyy):</label>
-                        <input type="text" id="birthDate" name="birthDate" placeholder="01-01-1990">
-                        <span id="birthDateError" class="error-message"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mobile">رقم الموبايل:</label>
-                        <input type="text" id="mobile" name="mobile">
-                        <span id="mobileError" class="error-message"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني:</label>
-                        <input type="text" id="email" name="email">
-                        <span id="emailError" class="error-message"></span>
-                    </div>
-
-                    <div class="form-buttons">
-                        <button type="submit" class="submit-btn">إرسال</button>
-                        <button type="button" onclick="hideForm()" class="cancel-btn">إلغاء</button>
-                    </div>
-                </form>
-            </div>
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 جميع الحقوق محفوظة - موقع طلب الطعام</p>
-    </footer>
+    <div class="container">
+        <h1>قائمة الوجبات</h1>
+        
+        <div class="meals-table-container">
+            <table id="mealsTable" class="meals-table" summary="جدول الوجبات">
+                <thead>
+                    <tr>
+                        <th>الرمز</th>
+                        <th>الصورة</th>
+                        <th>اسم الوجبة</th>
+                        <th>السعر</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>اختيار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- وجبة 1 -->
+                    <tr>
+                        <td>SF-001</td>
+                        <td><img src="ramadanrecipe.jpg" alt="مندي بالدجاج" width="50" height="50" /></td>
+                        <td>مندي بالدجاج</td>
+                        <td>45,000</td>
+                        <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" class="meal-checkbox" data-name="مندي بالدجاج" data-price="45000" /></td>
+                    </tr>
+                    <tr class="details-row" style="display: none;">
+                        <td colspan="6">
+                            <div class="meal-details">
+                                <p><strong>نوع المطبخ:</strong>سوري</p>
+                                <p><strong>تصنيف الطعام:</strong> أطباق رئيسية</p>
+                                <p><strong>المكونات:</strong></p>
+                                <ul><li>دجاج طازج</li><li>أرز بسمتي</li><li>بهارات خاصة</li><li>زعفران</li><li>مكسرات</li></ul>
+                            </div>
+                         </td>
+                    </tr>
+                    <!-- وجبة 2 -->
+                    <tr>
+                        <td>SF-002</td>
+                        <td><img src="images.jfif" alt="كبسة لحم" width="50" height="50" /></td>
+                        <td>كبسة لحم</td>
+                        <td>55,000</td>
+                        <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" class="meal-checkbox" data-name="كبسة لحم" data-price="55000" /></td>
+                    </tr>
+                    <tr class="details-row" style="display: none;">
+                        <td colspan="6">
+                            <div class="meal-details">
+                                <p><strong>نوع المطبخ:</strong> سوري</p>
+                                <p><strong>تصنيف الطعام:</strong> أطباق رئيسية</p>
+                                <p><strong>المكونات:</strong></p>
+                                <ul><li>لحم ضأن</li><li>أرز بسمتي</li><li>بهارات كبسة</li><li>طماطم وبصل</li><li>زبيب ومكسرات</li></ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- وجبة 3 -->
+                    <tr>
+                        <td>SF-003</td>
+                        <td><img src="shawarma.jpg" alt="شاورما دجاج" width="50" height="50" /></td>
+                        <td>شاورما دجاج</td>
+                        <td>25,000</td>
+                        <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" class="meal-checkbox" data-name="شاورما دجاج" data-price="25000" /></td>
+                    </tr>
+                    <tr class="details-row" style="display: none;">
+                        <td colspan="6">
+                            <div class="meal-details">
+                                <p><strong>نوع المطبخ:</strong> سوري</p>
+                                <p><strong>تصنيف الطعام:</strong> ساندويتشات</p>
+                                <p><strong>المكونات:</strong></p>
+                                <ul><li>دجاج مشوي</li><li>خبز عربي</li><li>طحينة</li><li>خضار طازجة</li><li>صلصة خاصة</li></ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- وجبة 4 -->
+                    <tr>
+                        <td>SF-004</td>
+                        <td><img src="falafel.png" alt="فلافل مشكلة" width="50" height="50" /></td>
+                        <td>فلافل مشكلة</td>
+                        <td>20,000</td>
+                        <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" class="meal-checkbox" data-name="فلافل مشكلة" data-price="20000" /></td>
+                    </tr>
+                    <tr class="details-row" style="display: none;">
+                        <td colspan="6">
+                            <div class="meal-details">
+                                <p><strong>نوع المطبخ:</strong> سوري</p>
+                                <p><strong>تصنيف الطعام:</strong> مقبلات</p>
+                                <p><strong>المكونات:</strong></p>
+                                <ul><li>فلافل طازجة</li><li>حمص</li><li>تبولة</li><li>خبز صاج</li><li>مخللات</li></ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- وجبة 5 -->
+                    <tr>
+                        <td>SF-005</td>
+                        <td><img src="burger.jfif" alt="برجر لحم" width="50" height="50" /></td>
+                        <td>برجر لحم</td>
+                        <td>35,000</td>
+                        <td><button class="details-btn" onclick="toggleDetails(this)">إظهار التفاصيل</button></td>
+                        <td><input type="checkbox" class="meal-checkbox" data-name="برجر لحم" data-price="35000" /></td>
+                    </tr>
+                    <tr class="details-row" style="display: none;">
+                        <td colspan="6">
+                            <div class="meal-details">
+                                <p><strong>نوع المطبخ:</strong> غربي</p>
+                                <p><strong>تصنيف الطعام:</strong> ساندويتشات</p>
+                                <p><strong>المكونات:</strong></p>
+                                <ul><li>لحم بقري مفروم</li><li>خبز برجر</li><li>جبنة شيدر</li><li>خضار طازجة</li><li>صلصة برجر</li></ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="myFunctions.js"></script>
+        <div class="continue-section">
+            <button id="continueBtn" onclick="showForm()" class="continue-btn">متابعة</button>
+        </div>
+
+        <!-- Order Form (Hidden by default) -->
+        <div id="orderForm" class="order-form" style="display: none;">
+            <h2>نموذج الطلب</h2>
+            <form id="customerForm" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <label for="fullName">الاسم الكامل:</label>
+                    <input type="text" id="fullName" name="fullName" />
+                    <span id="nameError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="nationalId">الرقم الوطني:</label>
+                    <input type="text" id="nationalId" name="nationalId" />
+                    <span id="nationalIdError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate">تاريخ الولادة (dd-mm-yyyy):</label>
+                    <input type="text" id="birthDate" name="birthDate" placeholder="01-01-1990" />
+                    <span id="birthDateError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">رقم الموبايل:</label>
+                    <input type="text" id="mobile" name="mobile" />
+                    <span id="mobileError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="text" id="email" name="email" />
+                    <span id="emailError" class="error-message"></span>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">إرسال</button>
+                    <button type="button" onclick="hideForm()" class="cancel-btn">إلغاء</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal ثابت للنافذة المنبثقة -->
+    <div id="summaryModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div id="summaryContent"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 جميع الحقوق محفوظة - موقع طلب الطعام</p>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
 </body>
 </html>
