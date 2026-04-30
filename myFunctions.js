@@ -187,6 +187,6 @@ function resetForm() {
 function exitSite() {
     if (confirm('هل أنت متأكد أنك تريد الخروج من الموقع؟')) {
         alert('شكراً لزيارتكم موقعنا!');
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
     }
 }
